@@ -1,0 +1,28 @@
+watchdog==2.1.6
+moviepy==1.0.3
+pyannote.audio==2.0
+openai==0.22.0
+Flask==2.1.2
+gunicorn==20.1.0
+# Optional GUI framework dependencies, uncomment if needed
+# Tkinter is part of the standard library, so it doesn't need to be included here
+# PyQt5==5.15.6
+# PyQtWebEngine==5.15.5
+
+# Additional dependencies for audio and video processing
+numpy==1.22.3
+ffmpeg-python==0.2.0
+
+# Logging dependencies
+loguru==0.6.0
+
+# If using Whisper for transcription, uncomment the following line
+# whisper==0.1.1
+
+# If using pyAudioAnalysis for diarization, uncomment the following line
+# pyAudioAnalysis==0.3.14
+
+# If using other diarization tools, add them here
+# Example:
+# pydub==0.25.1
+# scipy==1.7.3
