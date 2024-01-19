@@ -1,37 +1,45 @@
-# Timeline Website
+# Installation and Usage Guide for "Transcribe my videos"
 
-This is a simple vertical timeline website built with SvelteKit and Supabase. The timeline animates as the user scrolls down the page, with elements appearing on both the left and right sides of the line in an alternating style. Each element has a title, description, date, and an icon that describes its use.
+## Step 1: Clone the Repository
+- Open **GitHub Desktop**.
+- Navigate to `File > Clone Repository`.
+- In the URL tab, paste `https://github.com/WesElliottEFD/Transcribe-my-videos-.git` and choose your desired local path.
+- Click on `Clone`.
 
-## Tech Stack
-•	SvelteKit
+## Step 2: Open the Project in VS Code
+- Right-click on the repository in GitHub Desktop.
+- Select `Open in Visual Studio Code`.
 
-•	Supabase for database
+## Step 3: Set Up Your Environment
+- Ensure Python is installed on your machine.
+- Open a terminal in VS Code (`Terminal > New Terminal`).
 
-## Design
-The design is clean and simple, with a two-color theme system that users can switch between.
+## Step 4: Install Dependencies
+- The project has dependencies listed in `requirements.txt`.
+- Run `pip install -r requirements.txt` in the terminal.
 
-## Local Development Setup
+## Step 5: Configure Settings
+- Edit `config/settings.py` to set paths and other settings such as `FOLDER_TO_WATCH`, `TRANSCRIPTS_FOLDER`.
+- Adjust these according to your preferences.
 
-Follow these steps to set up the development environment locally:
+## Step 6: Running the Application
+- The main application is in `main.py`.
+- Start the application with `python main.py` in the terminal.
 
-1.	Clone the repository to your local machine.
-git clone <repository-url>
+## Step 7: Using the GUI (Optional)
+- For a GUI, check `ui/interface.py`.
+- This script uses Tkinter for a basic graphical interface.
 
-2.	Navigate to the project directory.
-cd timeline-website
+## Step 8: Understand the Functionality
+- The app monitors a folder for video files, extracts audio, performs speaker diarization, and transcribes the audio.
+- Details are in the `utils` folder (`audio_extraction.py`, `speaker_diarization.py`, `transcription.py`).
 
-3.	Install the necessary dependencies.
-npm install
+## Step 9: Check Logs and Output
+- Application logs are in `logs/processing.log`.
+- Transcriptions are saved as specified in `config/settings.py`.
 
-4.	Create a .env file in the root directory of the project and add your Supabase URL and public anon key.
-SUPABASE_URL=your-supabase-url
-SUPABASE_ANON_KEY=your-supabase-anon-key
+## Note
+- Ensure correct directory and Python environment when running commands.
+- The README in the repository is for a different project; refer to the source code for guidance.
 
-5.	Start the development server.
-npm run dev
 
-Now, you can open your browser and navigate to http://localhost:5000 to see the application running.
-
-Note
-If you encounter an error related to npm not being able to find a file, ensure that you are in the correct directory where package.json is located.
-![image](https://github.com/WesElliottEFD/Transcribe-my-videos-/assets/7026437/18d85bca-3f23-4bf8-b42f-554685851742)
